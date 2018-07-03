@@ -15,3 +15,9 @@ resource "github_team_membership" "virtualbox-Ringo_De_Smet" {
   username = "ringods"
   role     = "maintainer"
 }
+
+resource "github_team_membership" "virtualbox-Rio_Bard" {
+  team_id  = "${github_team.virtualbox.id}"
+  username = "riobard"
+  role     = "maintainer"
+}
