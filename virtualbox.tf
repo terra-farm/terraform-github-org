@@ -1,3 +1,12 @@
+module "virtualbox" {
+  source            = "modules/repository"
+  provider_name     = "VirtualBox"
+  repo_admin_team   = "${github_team.virtualbox.id}"
+  team_permission   = "admin"
+  additional_topics = ["virtualbox"]
+  has_downloads     = true
+}
+
 resource "github_team" "virtualbox" {
   name        = "virtualbox"
   description = "Team to manage the virtualbox provider"

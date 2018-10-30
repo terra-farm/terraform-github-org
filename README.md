@@ -25,7 +25,7 @@ environment variable:
 export ATLAS_TOKEN=<your TFE token here>
 ```
 
-As an organizaton admin, you should now be able to execute succesfully:
+As an organization admin, you should now be able to execute succesfully:
 
 ```
 terraform init
