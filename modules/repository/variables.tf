@@ -77,7 +77,7 @@ variable "archived" {
 }
 
 locals {
-  default_topics = ["terraform", "terraform-provider", "${replace(var.name, "_", "-")}"]
+  default_topics = "${compact(list("${length(var.provider_name) > 0 ? "terraform" : "" }", "${length(var.provider_name) > 0 ? "terraform-provider" : "" }", "${length(var.provider_name) > 0 ? lower(replace(var.provider_name, "_", "-")) : "" }"))}"
   topics         = "${concat(local.default_topics, var.additional_topics)}"
 }
 
