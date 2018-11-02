@@ -1,3 +1,21 @@
+module "go-xen-api-client" {
+  source            = "modules/repository"
+  name              = "go-xen-api-client"
+  description       = "Go XenAPI client"
+  repo_admin_team   = "${github_team.xenserver.id}"
+  team_permission   = "admin"
+  additional_topics = ["golang", "xapi", "xenapi", "xenapi-client"]
+}
+
+module "xenserver" {
+  source            = "modules/repository"
+  provider_name     = "XenServer"
+  repo_admin_team   = "${github_team.xenserver.id}"
+  team_permission   = "admin"
+  additional_topics = ["xenserver", "xen"]
+  has_downloads     = true
+}
+
 resource "github_team" "xenserver" {
   name        = "xenserver"
   description = "Team to manage the XenServer provider"

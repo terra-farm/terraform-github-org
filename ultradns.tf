@@ -1,3 +1,13 @@
+module "ultradnssdk" {
+  source            = "modules/repository"
+  name              = "udnssdk"
+  description       = "A ultradns SDK for golang"
+  repo_admin_team   = "${github_team.ultradns.id}"
+  team_permission   = "admin"
+  has_downloads     = true
+  additional_topics = ["golang", "ultradns"]
+}
+
 resource "github_team" "ultradns" {
   name        = "ultradns"
   description = "Team to manage the ultradns provider"

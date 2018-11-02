@@ -1,3 +1,12 @@
+module "go-virtualbox" {
+  source            = "modules/repository"
+  name              = "go-virtualbox"
+  description       = "VirtualBox wrappers in Go"
+  repo_admin_team   = "${github_team.virtualbox.id}"
+  team_permission   = "admin"
+  additional_topics = ["golang", "virtualbox"]
+}
+
 module "virtualbox" {
   source            = "modules/repository"
   provider_name     = "VirtualBox"
