@@ -10,6 +10,7 @@ module "go-virtualbox" {
 module "virtualbox" {
   source            = "modules/repository"
   provider_name     = "VirtualBox"
+  homepage_url      = "https://terra-farm.github.io/provider-virtualbox/"
   repo_admin_team   = "${github_team.virtualbox.id}"
   team_permission   = "admin"
   additional_topics = ["virtualbox"]

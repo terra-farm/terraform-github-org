@@ -1,6 +1,7 @@
 resource "github_repository" "repository" {
-  name        = "${local.name}"
-  description = "${local.description}"
+  name         = "${local.name}"
+  description  = "${local.description}"
+  homepage_url = "${var.homepage_url}"
 
   private            = false
   has_issues         = true
