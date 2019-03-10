@@ -13,7 +13,7 @@ module "xenserver" {
   homepage_url      = "https://terra-farm.github.io/provider-xenserver/"
   repo_admin_team   = "${github_team.xenserver.id}"
   team_permission   = "admin"
-  additional_topics = ["xenserver", "xen"]
+  additional_topics = ["xenserver", "xen", "xcp-ng"]
   has_downloads     = true
 }
 
