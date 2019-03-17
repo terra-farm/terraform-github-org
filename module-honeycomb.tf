@@ -2,7 +2,7 @@ module "module-honeycomb" {
   source          = "modules/module-repository"
   module_name     = "honeycomb"
   provider_name   = "aws"
-  homepage_url    = "https://registry.terraform.io/terra-farm/honeycomb/aws"
+  homepage_url    = "https://registry.terraform.io/modules/terra-farm/honeycomb/aws"
   repo_admin_team = "${github_team.virtualbox.id}"
   team_permission = "admin"
   has_downloads   = true
