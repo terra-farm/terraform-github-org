@@ -3,7 +3,7 @@ module "module-honeycomb" {
   module_name     = "honeycomb"
   provider_name   = "aws"
   homepage_url    = "https://registry.terraform.io/modules/terra-farm/honeycomb/aws"
-  repo_admin_team = "${github_team.virtualbox.id}"
+  repo_admin_team = "${github_team.module-honeycomb.id}"
   team_permission = "admin"
   has_downloads   = true
 }
@@ -19,7 +19,6 @@ resource "github_team_membership" "module-honeycomb-Ringo_De_Smet" {
   username = "ringods"
   role     = "maintainer"
 }
-
 
 # Honeycomb contributors to https://github.com/honeycombio/agentless-integrations-for-aws
 resource "github_team_membership" "module-honeycomb-Travis_Redman" {
@@ -39,4 +38,3 @@ resource "github_team_membership" "module-honeycomb-Nathan_LeClaire" {
   username = "nathanleclaire"
   role     = "member"
 }
-
