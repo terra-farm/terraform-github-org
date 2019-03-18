@@ -19,3 +19,24 @@ resource "github_team_membership" "module-honeycomb-Ringo_De_Smet" {
   username = "ringods"
   role     = "maintainer"
 }
+
+
+# Honeycomb contributors to https://github.com/honeycombio/agentless-integrations-for-aws
+resource "github_team_membership" "module-honeycomb-Travis_Redman" {
+  team_id  = "${github_team.module-honeycomb.id}"
+  username = "tredman"
+  role     = "member"
+}
+
+resource "github_team_membership" "module-honeycomb-Ben_Hartshorne" {
+  team_id  = "${github_team.module-honeycomb.id}"
+  username = "maplebed"
+  role     = "member"
+}
+
+resource "github_team_membership" "module-honeycomb-Nathan_LeClaire" {
+  team_id  = "${github_team.module-honeycomb.id}"
+  username = "nathanleclaire"
+  role     = "member"
+}
+
