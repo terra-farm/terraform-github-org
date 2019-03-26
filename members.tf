@@ -19,6 +19,6 @@ resource "github_membership" "Rio_Bard" {
 }
 
 resource "github_membership" "Wojtek_Bednarzak" {
-  username = "voytechnology"
+  username = "VoyTechnology"
   role     = "member"
 }
