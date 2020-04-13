@@ -37,3 +37,9 @@ resource "github_team_membership" "ultradns-Matthew_Robinson" {
   username = "mlrobinson"
   role     = "maintainer"
 }
+
+resource "github_team_membership" "ultradns-Ali_Asgar" {
+  team_id  = "${github_team.ultradns.id}"
+  username = "aliasgharmhowwala"
+  role     = "maintainer"
+}
