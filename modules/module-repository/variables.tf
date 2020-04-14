@@ -63,6 +63,6 @@ locals {
 }
 
 variable "additional_topics" {
-  type    = "list"
+  type    = list
   default = []
 }

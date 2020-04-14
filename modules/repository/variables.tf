@@ -38,7 +38,7 @@ variable "require_ci_pass" {
 }
 
 variable "status_checks" {
-  type    = "list"
+  type    = list
   default = ["continuous-integration/travis-ci"]
 }
 
@@ -82,6 +82,6 @@ locals {
 }
 
 variable "additional_topics" {
-  type    = "list"
+  type    = list
   default = []
 }
