@@ -1,5 +1,10 @@
 terraform {
-  backend "atlas" {
-    name = "terra-farm/terraform-github-org"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "terra-farm"
+
+    workspaces {
+      name = "terraform-github-org"
+    }
   }
 }
