@@ -21,3 +21,9 @@ resource "github_team_membership" "Alex_Rowley" {
   username = "rowleyaj"
   role     = "maintainer"
 }
+
+resource "github_team_membership" "Wojtek_Bednarzak" {
+  team_id  = github_team.admin.id
+  username = "VoyTechnology"
+  role     = "maintainer"
+}
