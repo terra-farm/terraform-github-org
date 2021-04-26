@@ -1,8 +1,3 @@
-resource "github_membership" "Dan_Webb" {
-  username = "damacus"
-  role     = "admin"
-}
-
 resource "github_membership" "Giacomo_Cariello" {
   username = "giacomocariello"
   role     = "admin"

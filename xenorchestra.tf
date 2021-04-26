@@ -5,7 +5,7 @@ module "xenorchestra" {
   #homepage_url      = "https://terra-farm.github.io/provider-xenorchestra/"
   repo_admin_team   = github_team.xenorchestra.id
   team_permission   = "admin"
-  additional_topics = ["xenorchestra", "xen", "xcp-ng"]
+  additional_topics = ["xenorchestra", "xen", "xcp-ng", "hacktoberfest"]
   has_downloads     = true
 }
 

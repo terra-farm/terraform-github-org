@@ -8,7 +8,7 @@ variable "name" {
 
 locals {
   default_name = "terraform-provider-${lower(var.provider_name)}"
-  name         = "${var.name == "" ? local.default_name : var.name }"
+  name         = var.name == "" ? local.default_name : var.name
 }
 
 variable "description" {
@@ -17,7 +17,7 @@ variable "description" {
 
 locals {
   default_description = "${var.provider_name} provider for Terraform"
-  description         = "${var.description == "" ? local.default_description : var.description }"
+  description         = var.description == "" ? local.default_description : var.description
 }
 
 variable "repo_admin_team" {
@@ -60,7 +60,7 @@ variable "team_permission" {
 
 locals {
   default_homepage_url = "https://terra-farm.github.com/providers/${local.name}"
-  homepage_url         = "${var.homepage_url == "" ? local.default_homepage_url : var.homepage_url}"
+  homepage_url         = var.homepage_url == "" ? local.default_homepage_url : var.homepage_url
 }
 
 # Pull Request Reviews
@@ -77,8 +77,8 @@ variable "archived" {
 }
 
 locals {
-  default_topics = "${compact(list("${length(var.provider_name) > 0 ? "terraform" : "" }", "${length(var.provider_name) > 0 ? "terraform-provider" : "" }", "${length(var.provider_name) > 0 ? lower(replace(var.provider_name, "_", "-")) : "" }"))}"
-  topics         = "${concat(local.default_topics, var.additional_topics)}"
+  default_topics = compact([length(var.provider_name) > 0 ? "terraform" : "" , length(var.provider_name) > 0 ? "terraform-provider" : "" , length(var.provider_name) > 0 ? lower(replace(var.provider_name, "_", "-")) : "" ])
+  topics         = concat(local.default_topics, var.additional_topics)
 }
 
 variable "additional_topics" {

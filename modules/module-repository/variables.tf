@@ -58,8 +58,8 @@ variable "archived" {
 }
 
 locals {
-  default_topics = ["terraform", "terraform-module", "${var.provider_name}", "${var.module_name}"]
-  topics         = "${concat(local.default_topics, var.additional_topics)}"
+  default_topics = ["terraform", "terraform-module", var.provider_name, var.module_name]
+  topics         = concat(local.default_topics, var.additional_topics)
 }
 
 variable "additional_topics" {

@@ -32,9 +32,3 @@ resource "github_team_membership" "module-honeycomb-Ben_Hartshorne" {
   username = "maplebed"
   role     = "member"
 }
-
-resource "github_team_membership" "module-honeycomb-Nathan_LeClaire" {
-  team_id  = github_team.module-honeycomb.id
-  username = "nathanleclaire"
-  role     = "member"
-}
