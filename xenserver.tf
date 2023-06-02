@@ -10,11 +10,12 @@ module "go-xen-api-client" {
 module "xenserver" {
   source            = "./modules/repository"
   provider_name     = "XenServer"
-  homepage_url      = "https://terra-farm.github.io/provider-xenserver/"
+  homepage_url      = "https://github.com/xenserver/terraform-provider-xenserver"
   repo_admin_team   = github_team.xenserver.id
   team_permission   = "admin"
   additional_topics = ["xenserver", "xen", "xcp-ng"]
   has_downloads     = true
+  archived          = true
 }
 
 resource "github_team" "xenserver" {
