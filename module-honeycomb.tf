@@ -14,12 +14,6 @@ resource "github_team" "module-honeycomb" {
   privacy     = "closed"
 }
 
-resource "github_team_membership" "module-honeycomb-Ringo_De_Smet" {
-  team_id  = github_team.module-honeycomb.id
-  username = "ringods"
-  role     = "maintainer"
-}
-
 # Honeycomb contributors to https://github.com/honeycombio/agentless-integrations-for-aws
 resource "github_team_membership" "module-honeycomb-Travis_Redman" {
   team_id  = github_team.module-honeycomb.id
