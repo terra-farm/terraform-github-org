@@ -10,12 +10,6 @@ resource "github_team_membership" "Joseph_Anthony_Pasquale_Holsten" {
   role     = "maintainer"
 }
 
-resource "github_team_membership" "Ringo_De_Smet" {
-  team_id  = github_team.admin.id
-  username = "ringods"
-  role     = "maintainer"
-}
-
 resource "github_team_membership" "Alex_Rowley" {
   team_id  = github_team.admin.id
   username = "rowleyaj"
